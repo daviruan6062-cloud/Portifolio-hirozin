@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
+  --color-neon-blue: #00e5ff;
+  --color-neon-blue-glow: rgba(0, 229, 255, 0.4);
+  --color-dark-bg: #0a0a0c;
+  --color-dark-card: #121216;
+  --color-dark-border: #1e1e24;
+}
+
+@utility glow-btn {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility glow-btn-hover {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+@utility glow-text {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+@utility glow-border {
+  border-color: rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility glow-border-hover {
+  border-color: rgba(0, 229, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.12);
+}
+
+@utility glow-card {
+  background: linear-gradient(145deg, #121216, #0d0d10);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility glow-card-hover {
+  border-color: rgba(0, 229, 255, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 229, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1e24;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+}
+
+/* Base custom styles */
+body {
+  font-family: var(--font-sans);
+}
