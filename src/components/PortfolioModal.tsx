@@ -118,18 +118,17 @@ export default function PortfolioModal({ project, onClose, onUpdateVideoUrl }: P
                   className="absolute inset-0 h-full w-full border-0"
                 />
               ) : (
-                <div className="absolute inset-0 h-full w-full">
-                  <img
-                    src={project.thumbnailUrl}
-                    alt={project.title}
-                    className="h-full w-full object-cover opacity-60"
-                  />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 p-6 text-center space-y-2">
-                    <div className="w-16 h-16 rounded-full bg-neon-blue/20 border border-neon-blue/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.2)]">
-                      <Play className="h-8 w-8 text-neon-blue fill-neon-blue/20" />
-                    </div>
-                    <p className="text-white text-base font-bold tracking-wide mt-2">Vídeo demonstrativo offline</p>
-                    <p className="text-xs text-slate-300 max-w-md">Use o formulário abaixo para adicionar seu link do YouTube/Vimeo/TikTok e assistir!</p>
+                <div className="absolute inset-0 h-full w-full bg-[#0d0d12] flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+                  {/* Futuristic ambient glow */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue/10 via-transparent to-[#9d4edd]/10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.01)_0%,rgba(0,0,0,0.6)_100%)] pointer-events-none" />
+                  
+                  <div className="relative z-10 w-16 h-16 rounded-full bg-neon-blue/20 border border-neon-blue/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,229,255,0.2)] animate-pulse">
+                    <Play className="h-8 w-8 text-neon-blue fill-neon-blue/20 ml-1" />
+                  </div>
+                  <div className="relative z-10 space-y-1">
+                    <p className="text-white text-base font-bold tracking-wide">Vídeo demonstrativo offline</p>
+                    <p className="text-xs text-slate-400 max-w-md mx-auto">Use o formulário abaixo para adicionar seu link do YouTube/Vimeo/TikTok e assistir!</p>
                   </div>
                 </div>
               )}

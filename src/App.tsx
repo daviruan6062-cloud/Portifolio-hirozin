@@ -41,7 +41,7 @@ import {
 } from './types';
 
 // Use direct path string for the generated avatar image to prevent typescript module loading errors
-const avatarImg = "/src/assets/images/capcut_avatar_anime_1784341543807.jpg";
+const avatarImg = "/src/assets/images/davi_ruan_avatar_1784247183459.jpg";
 
 export default function App() {
   // Projects & Filter State
@@ -200,19 +200,31 @@ export default function App() {
         id="inicio"
         className="relative flex min-h-screen items-center justify-center pt-24 pb-16 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full mt-8 lg:mt-0">
+        <div className="flex flex-col items-center justify-center text-center w-full mt-8 lg:mt-0 space-y-8">
           
           {/* Hero Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="lg:col-span-7 space-y-6 text-left"
+            className="space-y-6 flex flex-col items-center max-w-3xl"
           >
-            {/* Tag badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/5 text-xs font-semibold text-neon-blue tracking-widest uppercase">
-              <span className="flex h-2 w-2 rounded-full bg-neon-blue animate-ping" />
-              Editor de Vídeo Freelancer
+            {/* Elegant Profile Status Badge */}
+            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.02] border border-white/5 backdrop-blur-md shadow-lg transition-all hover:bg-white/[0.04] mb-2">
+              <div className="relative">
+                <div className="h-10 w-10 rounded-full bg-neon-blue/10 border border-neon-blue/30 flex items-center justify-center text-neon-blue shadow-[0_0_10px_rgba(0,242,254,0.15)]">
+                  <Video className="h-5 w-5" />
+                </div>
+                <span className="absolute bottom-0 right-0 flex h-3 w-3 items-center justify-center rounded-full bg-[#0a0a0c]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                </span>
+              </div>
+              <div className="text-left">
+                <p className="text-xs font-extrabold text-white leading-tight">Davi Ruan</p>
+                <p className="text-[10px] text-emerald-400 font-medium leading-none mt-0.5">Disponível para Projetos</p>
+              </div>
+              <div className="h-5 w-[1px] bg-white/10 mx-1.5" />
+              <span className="text-[10px] font-mono font-bold text-neon-blue uppercase tracking-wider">LUT #0992</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
@@ -220,16 +232,16 @@ export default function App() {
             </h1>
 
             {/* Requested Hero Text */}
-            <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed max-w-xl border-l-2 border-neon-blue/40 pl-4">
+            <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl border-x-2 border-neon-blue/40 px-6 py-2">
               "Transformo ideias em vídeos profissionais que prendem a atenção do público."
             </p>
 
-            <p className="text-sm text-slate-400 max-w-lg leading-relaxed">
+            <p className="text-sm text-slate-400 max-w-xl leading-relaxed text-center">
               Criação de narrativas dinâmicas para infoprodutores, marcas corporativas e criadores de conteúdo viral. Alto índice de retenção, edição de som imersiva e paleta cinematográfica.
             </p>
 
             {/* Action Buttons with requested glow effect */}
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap justify-center gap-4 pt-2">
               <button
                 onClick={() => handleScrollToSection('trabalho')}
                 className="group relative inline-flex items-center gap-2 rounded-xl bg-neon-blue px-8 py-4 text-sm font-bold uppercase tracking-wider text-black transition-all glow-btn hover:glow-btn-hover cursor-pointer"
@@ -247,7 +259,7 @@ export default function App() {
             </div>
 
             {/* Micro Stats Banner */}
-            <div className="grid grid-cols-2 gap-4 pt-8 border-t border-white/5 max-w-md">
+            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/5 w-full max-w-md justify-center">
               <div>
                 <span className="block text-2xl font-extrabold text-white">{stats.projectsCount}+</span>
                 <span className="text-[11px] text-slate-500 uppercase font-semibold">Vídeos Editados</span>
@@ -256,50 +268,6 @@ export default function App() {
                 <span className="block text-2xl font-extrabold text-[#9d4edd]">{stats.viewsGenerated}</span>
                 <span className="text-[11px] text-slate-500 uppercase font-semibold">Visualizações</span>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Hero Visual Image space */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="lg:col-span-5 flex justify-center"
-          >
-            <div className="relative w-full max-w-[340px] sm:max-w-[400px] aspect-square rounded-2xl p-[1px] bg-gradient-to-tr from-neon-blue via-transparent to-[#9d4edd] shadow-2xl">
-              {/* Inner container */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-[#0a0a0c]">
-                
-                {/* Real generated Avatar image */}
-                <img
-                  src={avatarImg}
-                  alt="Davi Ruan"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-
-                {/* Cyber overlays & subtle decorative tags */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                
-                {/* Tech elements overlay */}
-                <div className="absolute bottom-4 left-4 right-4 bg-[#121216]/90 border border-white/5 backdrop-blur-sm p-4 rounded-xl flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-3 w-3 items-center justify-center rounded-full bg-emerald-500/20">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    </span>
-                    <div>
-                      <h4 className="text-xs font-bold text-white">Davi Ruan</h4>
-                      <p className="text-[10px] text-slate-400">Disponível para Projetos</p>
-                    </div>
-                  </div>
-                  <div className="text-xs font-mono text-neon-blue font-semibold">
-                    LUT #0992
-                  </div>
-                </div>
-              </div>
-
-              {/* Glowing decorative lights behind the card */}
-              <div className="absolute -inset-1.5 -z-10 rounded-2xl bg-gradient-to-tr from-neon-blue to-[#9d4edd] opacity-20 blur-xl animate-pulse" />
             </div>
           </motion.div>
         </div>
@@ -664,26 +632,18 @@ export default function App() {
                   onClick={() => setSelectedProject(project)}
                 >
                   {/* Thumbnail container */}
-                  <div className="relative aspect-video w-full overflow-hidden bg-slate-900 border-b border-white/5">
-                    <img
-                      src={project.thumbnailUrl}
-                      alt={project.title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    
-                    {/* Dark gradient shadow */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
-
-                    {/* Glowing play icon overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="h-14 w-14 flex items-center justify-center rounded-full bg-neon-blue text-black glow-btn">
-                        <Play className="h-6 w-6 fill-current ml-0.5" />
-                      </div>
+                  <div className="relative aspect-video w-full overflow-hidden bg-[#0d0d12] border-b border-white/5 flex items-center justify-center transition-colors group-hover:bg-[#12121a]">
+                    {/* Interactive glowing play icon */}
+                    <div className="relative z-10 h-14 w-14 flex items-center justify-center rounded-full bg-neon-blue/10 text-neon-blue border border-neon-blue/30 group-hover:bg-neon-blue group-hover:text-black group-hover:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,254,0.15)] group-hover:shadow-[0_0_25px_rgba(0,242,254,0.4)]">
+                      <Play className="h-6 w-6 fill-current ml-0.5" />
                     </div>
 
+                    {/* Futuristic background gradients */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue/5 via-transparent to-[#9d4edd]/5 pointer-events-none" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.01)_0%,rgba(0,0,0,0.4)_100%)] pointer-events-none" />
+
                     {/* Metadata tags */}
-                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
                       <span className="text-[10px] uppercase font-bold tracking-widest text-white px-2.5 py-1 rounded bg-[#0a0a0c]/80 border border-white/10 backdrop-blur-sm">
                         {project.category}
                       </span>

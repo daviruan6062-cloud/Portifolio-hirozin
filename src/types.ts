@@ -57,7 +57,7 @@ export const PROJECTS_DATA: Project[] = [
     id: 's23-ultra',
     title: 'Review - Galaxy S23 Ultra',
     category: 'TikTok',
-    description: 'Edição ultra dinâmica detalhando as especificações do celular premium Galaxy S23 Ultra. Trabalho focado em alta retenção de público, com cortes dinâmicos no ritmo da trilha, zoom inteligente, design de som e inserções de anime.',
+    description: 'Edição ultra dinâmica detalhando as especificações do celular premium Galaxy S23 Ultra. Trabalho focado em alta retenção de público, com cortes dinâmicos no ritmo da trilha, zoom inteligente, design de som e efeitos dinâmicos de alta qualidade.',
     duration: '1:07',
     thumbnailUrl: '/src/assets/images/s23_vs_s24_cover_1784250117851.jpg',
     videoUrl: 'https://www.tiktok.com/@hirozin.0/video/7618589929676836116?is_from_webapp=1&sender_device=pc&web_id=7663613967732295169',
